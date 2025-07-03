@@ -2,6 +2,7 @@ from playwright.sync_api import sync_playwright
 
 # initiallize playwright
 pw = sync_playwright().start()
+
 # create Firefox browser object
 browser = pw.firefox.launch(
     # uncomment the lines below if you're using a web driver
@@ -11,6 +12,7 @@ browser = pw.firefox.launch(
 
 # create new browser tab
 page = browser.new_page()
+
 # navigate to web page
 page.goto("https://google.com")
 
